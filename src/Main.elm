@@ -53,17 +53,19 @@ type alias Style = List ( String, String )
 
 backdrop : Style
 backdrop =
-    [ ("background", "#fafafa")
-    , ("width", "100%")
+    [ ("width", "100%")
     , ("height", "100%")
     ]
 
 banner : Style
 banner =
-    [ ("background", "rgb(66, 133, 244)")
+    [ ("background-image", ("url(/resources/city.jpeg)"))
     , ("width", "100%")
     , ("height", "250px")
     , ("border-bottom", "lightgray 3px solid")
+    , ("bdackground-repeat", "no-repeat")
+    , ("background-size", "cover")
+    , ("background-position", "0.0")
     ]
 
 copy : Style
@@ -77,6 +79,7 @@ title : Style
 title = List.append [ ("padding-top", "90px")
                     , ("padding-left", "7%")
                     , ("font-size", "40px")
+                    , ("margin", "0")
                     ] copy
 
 
@@ -94,8 +97,7 @@ menuItem : Style
 menuItem =
     List.append [ ("font-size", "16px")
                 , ("display", "inline-block")
-                , ("width", "10%")
-            --    , ("background", "#f6916b")
+                , ("width", "140px")
                 , ("cursor", "pointer")
                 , ("height", "50px")
                 ] copy
